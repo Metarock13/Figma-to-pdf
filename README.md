@@ -21,3 +21,7 @@ python figmatopdf.py [FIGMA URL]
 
 #### Figma URL
 Figma file URL. For example: https://www.figma.com/file/fAwXTVwyv2s0wtVqToIH9XKx/Example
+
+
+## P.S.
+Or use a bot in Telegrams. https://t.me/figmatopdf_bot
