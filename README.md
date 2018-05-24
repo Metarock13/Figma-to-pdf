@@ -24,4 +24,4 @@ Figma file URL. For example: https://www.figma.com/file/fAwXTVwyv2s0wtVqToIH9XKx
 
 
 ## P.S.
-Or use a bot in Telegrams. https://t.me/figmatopdf_bot
+Or use a bot in Telegram. https://t.me/figmatopdf_bot
