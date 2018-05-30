@@ -1,11 +1,14 @@
-# -*- coding: utf- 8 -*-
+# -*- coding: utf-8 -*-
 import json
-import sys, os
-from reportlab.pdfgen import canvas
-from reportlab.lib.utils import ImageReader
+import os
+import sys
+
 import requests
+from reportlab.lib.utils import ImageReader
+from reportlab.pdfgen import canvas
 
 token = "< T O K E N >"
+
 
 def getfileid(url):
     d = url.split('/')
@@ -40,7 +43,7 @@ def imagefile(token, fileid, id):
     data = imagejson(token, fileid, id)
     jsn = json.loads(data)
     img = jsn["images"][id]
-    if img != None:
+    if img is not None:
         return img
     else:
         return False
@@ -62,7 +65,7 @@ if fileid:
         for t3 in t2:
             if t3["type"] == "FRAME":
                 rr = imagefile(token, fileid, t3["id"])
-                if rr != False:
+                if rr:
                     arr.append(rr)
     if len(arr) > 0:
         canv = canvas.Canvas(fileid + ".pdf")
@@ -73,5 +76,5 @@ if fileid:
             canv.setPageSize((image_width, image_height))
             canv.showPage()
         canv.save()
-        print("Save to "+fileid + ".pdf")
+        print("Save to " + fileid + ".pdf")
 print("FINISH ")
